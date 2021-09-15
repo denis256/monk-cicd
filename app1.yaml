@@ -1,0 +1,11 @@
+namespace: cicd
+
+app:
+    defines: runnable
+    version: 0.0.1
+    containers:
+        defines: containers
+        app:
+            image: denis256/test-adv-tech:ee098e1
+            ports:
+              - 10000:10000
