@@ -1,5 +1,4 @@
 namespace: cicd
-
 app:
     defines: runnable
     version: 0.0.1
