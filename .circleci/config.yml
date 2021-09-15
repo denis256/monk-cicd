@@ -10,7 +10,7 @@ jobs:
                     MONK="monk -s monkcode://$Monkcode --nofancy --nocolor"
                     $MONK login --email $email --password $pass
                     $MONK load app1.yaml
-                    $MONK update -t app cicd/app
+                    $MONK update -t app templates/local/cicd/app
                     $MONK ps
 workflows:
     build:
