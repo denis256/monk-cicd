@@ -7,6 +7,8 @@ jobs:
             - checkout
             - run:
                 command: |
+                    MONK="monk -s monkcode://$Monkcode --nofancy --nocolor"
+                    $MONK login --email $email --password $pass
                     $MONK ps
 workflows:
     build:
@@ -14,4 +16,4 @@ workflows:
             - deploy
                 context:
                     - monk
-                    
+
