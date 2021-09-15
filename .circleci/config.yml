@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+    deploy:
+        docker:
+            - image: gcr.io/monk-releases/monk-ci:latest
+        steps:
+            - checkout
+            - run:
+                command: |
+                    $MONK ps
+workflows:
+    build:
+        jobs:
+            - deploy
